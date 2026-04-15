@@ -1,3 +1,4 @@
+import { Header } from "@/widgets/header/ui/Header"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
@@ -57,7 +58,8 @@ export default function RootLayout({
         className="min-h-full flex flex-col font-sans"
         suppressHydrationWarning
       >
-        {children}
+        <Header />
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   )
