@@ -55,18 +55,25 @@ export default async function ComparisonPage({ params }: PageProps) {
     <main className="min-h-screen bg-slate-50/30 py-16 px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Page Header */}
-        <section className="text-center space-y-4">
-          <div className="inline-block px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-full uppercase tracking-widest">
-            Expert Comparison
+        <section className="text-center space-y-6">
+          <div className="flex justify-center items-center gap-4">
+            <span className="h-px w-12 bg-slate-200" />
+            <div className="px-3 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-black rounded-full uppercase tracking-tighter">
+              2026 Technical Duel
+            </div>
+            <span className="h-px w-12 bg-slate-200" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900">
-            {productA.brand}{" "}
-            <span className="text-slate-400 font-light">vs</span>{" "}
-            {productB.brand}
+
+          <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 leading-none">
+            {productA.name} <br className="md:hidden" />
+            <span className="text-indigo-600 px-4">vs</span>
+            {productB.name}
           </h1>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-            Which flagship OLED reigns supreme in 2026? We analyze the data to
-            find your perfect match.
+
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+            AI-driven specs analysis between {productA.brand}
+            {"'"}s flagship and {productB.brand}
+            {"'"}s challenger.
           </p>
         </section>
 
